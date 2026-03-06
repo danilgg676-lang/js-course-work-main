@@ -1,0 +1,14 @@
+@use 'modern-normalize';
+@use 'variables' as *;
+@use 'fonts';
+@use 'common';
+
+@use 'header';
+@use 'home';
+@use 'exercises';
+
+@use 'exercise-modal';
+@use 'rating-modal';
+@use 'global-notification';
+
+@use 'footer';

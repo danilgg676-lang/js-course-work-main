@@ -1,0 +1,21 @@
+:root {
+    /* Colors from Figma */
+    --color-dark: #242424;
+    --color-light: #F4F4F4;
+    --color-white: #FFFFFF;
+    --color-accent: #EEA10C;
+    --color-grey-alpha: rgba(36, 36, 36, 0.6);
+
+    /* Typography */
+    --font-family: 'DM Sans', sans-serif;
+
+}
+
+/* Mixins for Responsiveness */
+@mixin tablet {
+    @media screen and (min-width: 768px) { @content; }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 1440px) { @content; }
+}

@@ -1,0 +1,182 @@
+@use 'variables' as *;
+
+.footer {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  padding: 40px 0 20px;
+
+  @include tablet {
+    padding-top: 64px;
+    padding-bottom: 0px;
+  }
+
+  &__container {
+    display: grid;
+    gap: 20px;
+    grid-template-rows: auto auto auto auto auto auto repeat(2,1fr);
+    grid-template-areas: 
+      "logo"
+      "socials"
+      "message"
+      "form-title"
+      "form-input"
+      "form-button"
+      "copyright"
+      "legal-year";
+
+    @include tablet {
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: auto auto auto auto auto 1fr;
+      grid-template-areas: 
+        "logo         message"
+        "socials      message"
+        "socials      form-title"
+        "socials      form-input"
+        "socials      form-button"
+        "copyright    legal-year";
+      gap: 24px 32px;
+    }
+
+    @include desktop {
+      grid-template-columns: 1fr 1.5fr 1fr;
+      grid-template-rows: repeat(3,auto) 1fr;
+      grid-template-areas: 
+        "logo         message    form-title"
+        "socials      message    form-input"
+        "socials      message    form-button"
+        "copyright    legal      year"; 
+      align-items: start;
+    }
+  }
+  &__brand, 
+  &__message, 
+  &__subscribe, 
+  &__subscribe-form, 
+  &__subscribe-form-field {
+    display: contents; 
+  }
+
+  &__brand-logo { 
+    grid-area: logo; 
+    img { width: 132px; height: auto; }
+  }
+
+  &__socials { 
+    grid-area: socials; 
+    display: flex; 
+    gap: 12px;
+    
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(244, 244, 244, 0.1);
+      border-radius: 10px;
+      transition: background-color 0.3s, border-color 0.3s;
+
+      &:hover {
+        background-color: rgba(244, 244, 244, 0.1);
+        border-color: rgba(244, 244, 244, 0.3);
+      }
+    }
+  }
+
+  &__message-text { 
+    grid-area: message; 
+    font-size: 38px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+
+    @include tablet { font-size: 56px; }
+    &-italic { font-style: italic; }
+
+    @include desktop{
+      font-size: 56px;
+    }
+  }
+
+  &__subscribe-title { 
+    grid-area: form-title; 
+    font-size: 14px;
+    line-height: 1.3;
+
+  }
+
+  &__subscribe-form-input { 
+    grid-area: form-input; 
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgba(244, 244, 244, 0.3);
+    border-radius: 30px;
+    padding: 14px 24px;
+    color: var(--color-light);
+    font-size: 14px;
+    outline: none;
+
+    &::placeholder { color: rgba(244, 244, 244, 0.5); }
+    &:focus { border-color: var(--color-light); }
+  }
+
+  &__subscribe-form-button { 
+    grid-area: form-button; 
+    width: 100%;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    border: none;
+    border-radius: 30px;
+    padding: 14px 40px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 150px;
+    @include tablet{
+      margin: 0;
+    }
+    @include desktop{
+      margin: 0;
+    }
+
+    &:hover { background-color: var(--color-accent); }
+  }
+
+  &__copyright { 
+    grid-area: copyright; 
+    font-size: 14px;
+    color: rgba(244, 244, 244, 0.5);
+    align-self: end;
+  }
+
+  &__legal { 
+    grid-area: legal-year;
+    display: flex;
+    gap: 8px;
+    font-size: 14px;
+    color: rgba(244, 244, 244, 0.5);
+    align-self: end;
+
+    &-link {
+      color: inherit;
+      text-decoration: none;
+      &:hover { text-decoration: underline; }
+    }
+
+    @include desktop { grid-area: legal; }
+  }
+
+  &__year { 
+    grid-area: legal-year;
+    font-size: 14px;
+    color: rgba(244, 244, 244, 0.3);
+    align-self: end;
+    justify-self: end;
+
+    @include desktop { 
+      grid-area: year; 
+      justify-self: left;
+      align-self: flex-end;
+    }
+  }
+}

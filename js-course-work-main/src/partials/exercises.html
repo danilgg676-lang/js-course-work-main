@@ -1,0 +1,73 @@
+<section class="exercises container">
+  <div class="exercises__content">
+    <div class="exercises__content__header">
+      <div class="exercises__content__header-top">
+        <div class="exercises__content__header-breadcrumbs" id="js-exercises-breadcrumbs">
+          <h2 class="exercises__content__header-title">
+            <span class="js-breadcrumb-base">Exercises</span>
+            <span class="js-breadcrumb-divider" style="display: none;"> / </span>
+            <span class="js-breadcrumb-current"></span>
+          </h2>
+        </div>
+      </div>
+      <div class="exercises__content__header-filters">
+        <form class="exercises__content__header-search" id="js-exercises-search">
+          <input type="text" class="exercises__content__header-search-input" id="js-exercises-search-input"
+            placeholder="Search...">
+          <button type="submit" class="exercises__search-button">
+            <img src="./images/svg/search.svg" alt="Search" width="18" height="18">
+          </button>
+        </form>
+
+        <div class="exercises__filters-group">
+          <button class="exercises__filters-group-item exercises__filters-group-item--active"
+            data-filter="Muscles">Muscles</button>
+          <button class="exercises__filters-group-item" data-filter="Body parts">Body parts</button>
+          <button class="exercises__filters-group-item" data-filter="Equipment">Equipment</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="exercises__content__main">
+      <aside class="exercises__content__main__aside">
+        <div class="exercises__content__main__aside__quote">
+          <img src="./images/svg/runner-icon-light.svg" alt="Runner" width="30" height="30">
+          <div class="exercises__content__main__aside__quote-content">
+            <div class="exercises__content__main__aside__quote-title">
+              <span class="exercises__content__main__aside__quote-title-text">Quote of the day</span>
+              <img src="./images/svg/quote-icon.svg" alt="Quote" width="20" height="20">
+            </div>
+            <p class="exercises__content__main__aside__quote-text" id="js-exercises-quote-text"></p>
+            <div class="exercises__content__main__aside__quote-author" id="js-exercises-quote-author"></div>
+          </div>
+        </div>
+
+        <picture class="exercises__content__main__aside__image_box">
+          <source srcset="./images/exercises-aside.webp 1x, ./images/exercises-aside@2x.webp 2x" type="image/webp">
+          <img src="./images/exercises-aside.png" 
+               srcset="./images/exercises-aside@2x.png 2x"
+               alt="Exercise motivation"
+               class="exercises__content__main__aside__image" 
+               width="335" height="450" 
+               loading="lazy">
+        </picture>
+
+        <div class="exercises__content__main__aside__norm">
+          <img src="./images/svg/norm-icon.svg" alt="" width="30" height="30">
+          <div class="exercises__content__main__aside__norm-context">
+            <span class="exercises__content__main__aside__norm-context-title">110 min</span><br>
+            <span class="exercises__content__main__aside__norm-context-subtitle">Daily norm of sports</span>
+            <p class="exercises__content__main__aside__norm-context-text">
+              The World Health Organization recommends at least 150 minutes of moderate-intensity aerobic physical activity throughout the week for adults aged 18-64. However, what happens if we adjust that number to 110 minutes every day? While it might seem like a high number to hit, dedicating 110 minutes daily to sporting activities may offer unparalleled benefits to physical health, mental well-being, and overall quality of life.
+            </p>
+          </div>
+        </div>
+      </aside>
+
+      <div class="exercises__content__main__cards">
+        <ul class="exercises__content__main__cards__cards" id="js-exercises-container"></ul>
+        <ul class="exercises__content__main__cards__pagination" id="js-exercises-pagination"></ul>
+      </div>
+    </div>
+  </div>
+</section>

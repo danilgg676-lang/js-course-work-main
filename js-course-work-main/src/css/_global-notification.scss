@@ -1,0 +1,46 @@
+@use 'variables' as *;
+.global-notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3000;
+  width: calc(100% - 40px);
+  max-width: 400px;
+  transition: opacity 0.3s, transform 0.3s;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: 12px 16px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  &__text {
+    font-size: 14px;
+    font-family: var(--font-family);
+  }
+
+  &__close {
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &.success .global-notification__content {
+    background-color: #4caf50;
+  }
+
+  &.error .global-notification__content {
+    background-color: #f44336; 
+  }
+}

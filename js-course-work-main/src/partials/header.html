@@ -1,0 +1,66 @@
+<header class="header">
+  <div class="container header__container">
+    <div class="header__logo">
+      <a href="./index.html">
+        <img src="./images/svg/logo-dark.svg" alt="Your Energy" width="132" height="24">
+      </a>
+    </div>
+    
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li>
+          <button class="header__nav-link header__nav-link--active" data-page="home">Home</button>
+        </li>
+        <li>
+          <button class="header__nav-link" data-page="favorites">Favorites</button>
+        </li>
+      </ul>
+    </nav>
+
+    <ul class="header__socials">
+      <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="header__socials-link" aria-label="Facebook">
+        <img src="./images/svg/facebook-dark.svg" alt="" width="44" height="44">
+      </a></li>
+      <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="header__socials-link" aria-label="Instagram">
+        <img src="./images/svg/instagram-dark.svg" alt="" width="44" height="44">
+      </a></li>
+      <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="header__socials-link" aria-label="YouTube">
+        <img src="./images/svg/youtube-dark.svg" alt="" width="44" height="44">
+      </a></li>
+    </ul>
+
+    <button class="header__burger js-open-menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+<!--Mobile-->
+<div class="mobile-menu js-menu-container" style="display: none;">
+  <div class="mobile-menu__content">
+    <button class="mobile-menu__close js-close-menu" aria-label="Close menu">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 7L7 21M7 7L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+    <nav class="mobile-menu__nav">
+      <ul class="mobile-menu__nav-list">
+        <li><button class="mobile-menu__nav-link mobile-menu__nav-link--active" data-page="home">Home</button></li>
+        <li><button class="mobile-menu__nav-link" data-page="favorites">Favorites</button></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu__socials">
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="mobile-menu__socials-link" aria-label="Facebook">
+        <img src="./images/svg/facebook-light.svg" alt="" width="44" height="44">
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="mobile-menu__socials-link" aria-label="Instagram">
+        <img src="./images/svg/instagram-light.svg" alt="" width="44" height="44">
+      </a>
+      <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="mobile-menu__socials-link" aria-label="YouTube">
+        <img src="./images/svg/youtube-light.svg" alt="" width="44" height="44">
+      </a>
+    </div>
+  </div>
+</div>
